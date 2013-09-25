@@ -7,6 +7,6 @@ import play.api.templates.Html
 object Application extends Controller {
   
   def index = Action {
-    Ok(views.html.index("Varun's Home Page"))
+    Ok(views.html.home.home("Varun Murthy | Home"))
   }
 }
