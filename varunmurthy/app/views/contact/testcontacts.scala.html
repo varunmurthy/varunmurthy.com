@@ -1,0 +1,18 @@
+@(contacts: List[Contact])
+
+@import helper._
+
+@main("Contact list") {
+    
+    <h1>@contacts.size contact(s)</h1>
+    
+    <ul>
+        @contacts.map { contact =>
+            <li>
+                @contact.label
+            </li>
+        }
+    </ul>
+    }
+    
+}
