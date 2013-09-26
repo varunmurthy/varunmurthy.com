@@ -8,13 +8,16 @@ var Contact = function () {
 			$(document).ready(function(){
 			  map = new GMaps({
 				div: '#map',
-				lat: -13.004333,
-				lng: -38.494333
+				lat: 33.772935,
+				lng: -84.382764
 			  });
 			   var marker = map.addMarker({
-		            lat: -13.004333,
-					lng: -38.494333,
-		            title: 'Loop, Inc.'
+		            lat: 33.772935,
+					lng: -84.382764,
+		            title: 'Me !',
+	            	infoWindow: {
+	            		  content: '<p>144 Ponce De Leon Avenue</p>'
+	            		}
 		        });
 			});
         }

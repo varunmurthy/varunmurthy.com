@@ -1858,3 +1858,53 @@ i.style-switcher-btn-option:hover {
 	padding: 7px;
 	text-shadow: none !important;
 }
+
+
+
+
+ol.tumblr_posts{
+
+    list-style:none;
+} 
+
+/*Blog Page
+------------------------------------*/
+/* .blog-page ul,
+.blog-page li {
+	margin:0 !important;
+	padding:0 !important;
+} */
+div .tumblr_title {
+	color:#555 !important; 
+	margin-top:25px !important; 
+	text-shadow:none !important; 
+	text-shadow:0 0 1px #f6f6f6 !important;
+	font-weight:normal !important; 
+	font-family:'Open Sans', sans-serif !important;
+	font-size: 24.5px; 
+	color:#72c02c !important;
+}
+.tumblr_post {
+	color:#555;
+	font-size:12px;
+}
+.tumblr_post {
+	margin-right:7px !important;
+}
+.tumblr_post i {
+	color:#666;
+}
+.tumblr_post a:hover {
+	color:#72c02c;
+	text-decoration:none;
+}
+.tumblr_post ul.blog-info {
+	border-top:solid 1px #eee;
+}
+.tumblr_post .blog-img { 
+	margin:10px 0;
+}
+
+.tumblr_body a {
+	color: #72c02c;
+}

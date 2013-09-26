@@ -6,7 +6,11 @@
 GET     /                           controllers.Application.index
 
 # Contact Page
-GET		/contact					controllers.Contact.index
+GET		/contact					controllers.ContactPage.index
+
+# Contact Page
+GET		/blog					controllers.Blog.index
+
 
 
 # Map static resources from the /public folder to the /assets URL path
