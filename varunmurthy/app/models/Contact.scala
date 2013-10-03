@@ -6,7 +6,6 @@ import play.api.Play.current
 import play.api.db.DB
 
 case class Contact(id: Long, name: String, email: String, message: String)
-case class Email(id: Long, body: String)
 
 object Contact {
 
@@ -21,13 +20,13 @@ object Contact {
   
   def all(): List[Contact] = {
     DB.withConnection { implicit c =>
-      SQL("select * from task").as(contact *)
+      SQL("select * from contact").as(contact *)
     }
   }
 
   def create(name: String, email: String, message: String) {
     DB.withConnection { implicit c =>
-      SQL("insert into contact (name, email, message) values ({label}, {email}, {message})").on(
+      SQL("insert into contact (name, email, message) values ({name}, {email}, {message})").on(
         'name -> name, 'email -> email, 'message -> message).executeUpdate()
     }
   }

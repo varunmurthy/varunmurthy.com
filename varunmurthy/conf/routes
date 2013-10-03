@@ -8,10 +8,14 @@ GET     /                           controllers.Application.index
 # Contact Page
 GET		/contact					controllers.ContactPage.index
 
+GET 	/contact/newContact			controllers.ContactPage.index
+POST 	/contact/newContact			controllers.ContactPage.newContact
+
 # Contact Page
-GET		/blog					controllers.Blog.index
+GET		/blog						controllers.Blog.index
 
-
+# About Page
+GET 	/about						controllers.AboutPage.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

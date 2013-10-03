@@ -1,18 +1,12 @@
-@(contacts: List[Contact])
+@(message: String, contacts: List[Contact]) 
 
-@import helper._
+@import helper._ 
 
-@main("Contact list") {
-    
-    <h1>@contacts.size contact(s)</h1>
-    
-    <ul>
-        @contacts.map { contact =>
-            <li>
-                @contact.label
-            </li>
-        }
-    </ul>
-    }
-    
-}
+<h1>@message</h1>
+<h1>@contacts.size contact(s)</h1>
+
+<ul>
+	@contacts.map { contact =>
+	<li>@contact.name</li> }
+</ul>
+

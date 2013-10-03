@@ -5,8 +5,8 @@
 CREATE SEQUENCE contact_id_seq;
 CREATE TABLE contact (
     id integer NOT NULL DEFAULT nextval('contact_id_seq'),
-    name varchar(255)
-    email varchar(255)
+    name varchar(255),
+    email varchar(255),
     message varchar(1023)
 );
  

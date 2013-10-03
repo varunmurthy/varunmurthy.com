@@ -1,6 +1,8 @@
-@(message: String)
+@(message: String)(contactForm: Form[(String, String, String)])(implicit flash: Flash)
 
-@main {
+@import helper._
+
+@main(message) {
 
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
@@ -24,16 +26,22 @@
 	<div class="row-fluid">
 		<div class="span9">
             <div class="headline"><h3>Contact Me</h3></div>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p><br />
-			<form>
+            <p>@flash.get("success")</p>
+            <!-- <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p><br /> -->
+			<!-- <form action="/contact/newTask" method="post"> -->
+			@form(routes.ContactPage.newContact) {
                 <label>Name</label>
-                <input type="text" class="span7 border-radius-none" />
+                <!-- inputText(contactForm("name"), 'type -> "text", 'class -> "span7 border-radius-none", '_label -> "Name") -->
+                <input name="name" type="text" class="span7 border-radius-none" />
                 <label>Email <span class="color-red">*</span></label>
-                <input type="text" class="span7 border-radius-none" />
+                <!-- @inputText(contactForm("email"), 'type -> "text", 'class -> "span7 border-radius-none") -->
+                <input name="email" type="text" class="span7 border-radius-none" />
                 <label>Message</label>
-                <textarea rows="8" class="span10"></textarea>
+                <!-- @textarea(contactForm("message"), 'rows->"8", 'class->"span10") -->
+                <textarea name="message" rows="8" class="span10"></textarea>
                 <p><button type="submit" class="btn-u">Send Message</button></p>
-            </form>
+            }
+             
         </div><!--/span9-->
         
 		<div class="span3">
@@ -52,6 +60,3 @@
 <!--=== End Content Part ===-->
 
 }
-
-</body>
-</html> 
