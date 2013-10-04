@@ -8,7 +8,6 @@ GET     /                           controllers.Application.index
 # Contact Page
 GET		/contact					controllers.ContactPage.index
 
-GET 	/contact/newContact			controllers.ContactPage.index
 POST 	/contact/newContact			controllers.ContactPage.newContact
 
 # Contact Page
